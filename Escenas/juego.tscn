@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://buhfjrp6dgu11"]
+[gd_scene load_steps=5 format=3 uid="uid://buhfjrp6dgu11"]
 
-[ext_resource type="PackedScene" uid="uid://oaf5u6q0ipk6" path="res://Escenas/bala.tscn" id="1_d3d2o"]
+[ext_resource type="PackedScene" uid="uid://oaf5u6q0ipk6" path="res://Escenas/Balas/bala.tscn" id="1_d3d2o"]
 [ext_resource type="PackedScene" uid="uid://xfaymgsxccxp" path="res://Escenas/Jugador.tscn" id="2_spkme"]
+[ext_resource type="PackedScene" uid="uid://dcvqguf3ikyxs" path="res://Escenas/Balas/bala_2.tscn" id="3_spkme"]
+[ext_resource type="PackedScene" uid="uid://cyumrq7187rlg" path="res://Escenas/Balas/bala_3.tscn" id="4_n77xa"]
 
 [node name="Juego" type="Node2D"]
 
@@ -9,3 +11,9 @@
 position = Vector2(632, 280)
 
 [node name="Protagonista" parent="." instance=ExtResource("2_spkme")]
+
+[node name="Bala_2" parent="." instance=ExtResource("3_spkme")]
+position = Vector2(745, 106)
+
+[node name="Bala_3" parent="." instance=ExtResource("4_n77xa")]
+position = Vector2(484, 122)

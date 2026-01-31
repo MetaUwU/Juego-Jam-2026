@@ -16,8 +16,6 @@ func Cambiar_Mascara():
 		set_collision_layer_value(1, true)
 		set_collision_layer_value(2, false)
 		set_collision_layer_value(3, false)
-
-
 		print("Mascara 1")
 	
 	if Input.is_action_just_pressed("Mascara_2"):
