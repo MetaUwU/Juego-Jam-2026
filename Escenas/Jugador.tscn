@@ -1,14 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://xfaymgsxccxp"]
+[gd_scene load_steps=7 format=3 uid="uid://xfaymgsxccxp"]
 
 [ext_resource type="Script" uid="uid://cvtycaxdwao4p" path="res://jugador.gd" id="1_pqx3y"]
 [ext_resource type="Script" uid="uid://ca4rfcn0tbb81" path="res://Escenas/hitbox_prota.gd" id="2_8g85c"]
 [ext_resource type="Texture2D" uid="uid://bu0ybul4bnke8" path="res://Placeholder/Noli.jpg" id="3_5jvw8"]
+[ext_resource type="Texture2D" uid="uid://b8jx4u8b8bb4o" path="res://Placeholder/noli cristalizado.png" id="4_muoba"]
+[ext_resource type="Texture2D" uid="uid://bx4dg7ki7od55" path="res://Placeholder/YAAI Noli.png" id="5_fwv5a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pfvk3"]
 size = Vector2(40, 42)
 
 [node name="Protagonista" type="CharacterBody2D"]
-position = Vector2(236, 180)
+position = Vector2(197, 216)
 disable_mode = 1
 script = ExtResource("1_pqx3y")
 metadata/_edit_group_ = true
@@ -18,8 +20,17 @@ shape = SubResource("RectangleShape2D_pfvk3")
 debug_color = Color(1, 0.05490196, 0.19215687, 0.41960785)
 script = ExtResource("2_8g85c")
 
-[node name="Sprite_prota" type="Sprite2D" parent="."]
+[node name="Sprite_prota_1" type="Sprite2D" parent="."]
 scale = Vector2(0.3880597, 0.44621515)
 texture = ExtResource("3_5jvw8")
 
 [node name="Animacion_prota" type="AnimationPlayer" parent="."]
+
+[node name="Sprite_prota_2" type="Sprite2D" parent="."]
+position = Vector2(1.9073486e-06, 1.7166138e-05)
+scale = Vector2(0.15662651, 0.2248996)
+texture = ExtResource("4_muoba")
+
+[node name="Sprite_prota_3" type="Sprite2D" parent="."]
+scale = Vector2(0.38805968, 0.44621512)
+texture = ExtResource("5_fwv5a")

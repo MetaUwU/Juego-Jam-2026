@@ -16,16 +16,31 @@ func Cambiar_Mascara():
 		set_collision_layer_value(1, true)
 		set_collision_layer_value(2, false)
 		set_collision_layer_value(3, false)
+		
+		$Sprite_prota_1.visible = true
+		$Sprite_prota_2.visible = false
+		$Sprite_prota_3.visible = false
+		
 		print("Mascara 1")
 	
 	if Input.is_action_just_pressed("Mascara_2"):
 		set_collision_layer_value(2, true)
 		set_collision_layer_value(1, false)
 		set_collision_layer_value(3, false)
+		
+		$Sprite_prota_2.visible = true
+		$Sprite_prota_3.visible = false
+		$Sprite_prota_1.visible = false
+		
 		print("mascara 2")
 		
 	if Input.is_action_just_pressed("Mascara_3"):
 		set_collision_layer_value(3, true)
 		set_collision_layer_value(2, false)
 		set_collision_layer_value(1, false)
+		
+		$Sprite_prota_3.visible = true
+		$Sprite_prota_2.visible = false
+		$Sprite_prota_1.visible = false
+		
 		print("Mascara 31sds")
