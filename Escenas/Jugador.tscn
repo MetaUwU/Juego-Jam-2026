@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://xfaymgsxccxp"]
+
+[ext_resource type="Script" uid="uid://cvtycaxdwao4p" path="res://jugador.gd" id="1_pqx3y"]
+[ext_resource type="Texture2D" uid="uid://bi7il5ylcdd3y" path="res://Sprites/icon.svg" id="2_5jvw8"]
+[ext_resource type="Script" uid="uid://ca4rfcn0tbb81" path="res://Escenas/hitbox_prota.gd" id="2_8g85c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pfvk3"]
+
+[node name="Protagonista" type="CharacterBody2D"]
+position = Vector2(313, 245)
+disable_mode = 1
+script = ExtResource("1_pqx3y")
+
+[node name="Hitbox_prota" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_pfvk3")
+debug_color = Color(1, 0.05490196, 0.19215687, 0.41960785)
+script = ExtResource("2_8g85c")
+
+[node name="Sprite_prota" type="Sprite2D" parent="."]
+texture = ExtResource("2_5jvw8")
+
+[node name="Animacion_prota" type="AnimationPlayer" parent="."]

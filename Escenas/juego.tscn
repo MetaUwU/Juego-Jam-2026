@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://buhfjrp6dgu11"]
+
+[ext_resource type="PackedScene" uid="uid://oaf5u6q0ipk6" path="res://Escenas/bala.tscn" id="1_d3d2o"]
+[ext_resource type="PackedScene" uid="uid://xfaymgsxccxp" path="res://Escenas/Jugador.tscn" id="2_spkme"]
+
+[node name="Juego" type="Node2D"]
+
+[node name="Bala" parent="." instance=ExtResource("1_d3d2o")]
+position = Vector2(632, 280)
+
+[node name="Protagonista" parent="." instance=ExtResource("2_spkme")]
