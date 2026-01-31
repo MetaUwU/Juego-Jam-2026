@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://ct6t224x6ues7"]
+
+[ext_resource type="Texture2D" uid="uid://bi7il5ylcdd3y" path="res://Sprites/icon.svg" id="1_tkg25"]
+
+[node name="fondo" type="Parallax2D"]
+z_index = -1
+autoscroll = Vector2(0, 20)
+follow_viewport = false
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(325, 200)
+scale = Vector2(8.675781, 4.2109375)
+texture = ExtResource("1_tkg25")
