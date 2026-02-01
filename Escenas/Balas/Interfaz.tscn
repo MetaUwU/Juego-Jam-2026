@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://u0cxj2a4kk0f"]
+[gd_scene load_steps=6 format=3 uid="uid://u0cxj2a4kk0f"]
 
 [ext_resource type="Script" uid="uid://cs6s536ktjpmf" path="res://Escenas/Balas/interfaz.gd" id="1_m707h"]
 [ext_resource type="Texture2D" uid="uid://bu0ybul4bnke8" path="res://Placeholder/Noli.jpg" id="2_m707h"]
+[ext_resource type="Texture2D" uid="uid://h8imy3rjyitq" path="res://Sprites/DOC-20260201-WA0002.png" id="3_igm0i"]
+[ext_resource type="Texture2D" uid="uid://4q4h8oeukijj" path="res://Sprites/DOC-20260201-WA0001.png" id="4_wr8bn"]
+[ext_resource type="Texture2D" uid="uid://bx4dg7ki7od55" path="res://Placeholder/YAAI Noli.png" id="5_wr8bn"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -49,3 +52,57 @@ offset_right = 336.0
 offset_bottom = 706.0
 texture = ExtResource("2_m707h")
 expand_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1195, 110.99998)
+scale = Vector2(0.19921875, 0.24023438)
+texture = ExtResource("3_igm0i")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(1197, 231.99998)
+scale = Vector2(0.20312507, 0.23046884)
+texture = ExtResource("4_wr8bn")
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1113.0
+offset_top = 118.0
+offset_right = 1162.0
+offset_bottom = 167.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "J"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(1199.5, 337.5)
+scale = Vector2(0.3119047, 0.27380955)
+texture = ExtResource("5_wr8bn")
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1103.0
+offset_top = 218.0
+offset_right = 1152.0
+offset_bottom = 267.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "K"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1109.0
+offset_top = 330.0
+offset_right = 1158.0
+offset_bottom = 379.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "L"
+horizontal_alignment = 1
+vertical_alignment = 1

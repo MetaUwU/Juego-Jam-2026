@@ -20,5 +20,16 @@ func _process(delta: float) -> void:
 		$TextureRect2.hide()
 	if VidasJugador.hp == 0:
 		$TextureRect.hide()
-	
-	
+		#mascara roja 1 mascara verde 2
+	if VidasJugador.mascara == 3:
+		$Sprite2D3.show()
+		$Sprite2D2.hide()
+		$Sprite2D.hide()
+	if VidasJugador.mascara == 2:
+		$Sprite2D2.show()
+		$Sprite2D.hide()
+		$Sprite2D3.hide()
+	if VidasJugador.mascara == 1:
+		$Sprite2D.show()
+		$Sprite2D2.hide()
+		$Sprite2D3.hide()

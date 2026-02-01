@@ -21,6 +21,7 @@ func Cambiar_Mascara():
 		$Sprite_prota_1.visible = true
 		$Sprite_prota_2.visible = false
 		$Sprite_prota_3.visible = false
+		VidasJugador.mascara = 1
 		
 		print("Mascara 1")
 	
@@ -32,7 +33,7 @@ func Cambiar_Mascara():
 		$Sprite_prota_2.visible = true
 		$Sprite_prota_3.visible = false
 		$Sprite_prota_1.visible = false
-		
+		VidasJugador.mascara = 2	
 		print("mascara 2")
 		
 	if Input.is_action_just_pressed("Mascara_3"):
@@ -43,5 +44,5 @@ func Cambiar_Mascara():
 		$Sprite_prota_3.visible = true
 		$Sprite_prota_2.visible = false
 		$Sprite_prota_1.visible = false
-		
+		VidasJugador.mascara = 3
 		print("Mascara 31sds")

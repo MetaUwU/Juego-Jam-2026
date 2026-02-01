@@ -1,10 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://buhfjrp6dgu11"]
+[gd_scene load_steps=14 format=3 uid="uid://buhfjrp6dgu11"]
 
 [ext_resource type="PackedScene" uid="uid://oaf5u6q0ipk6" path="res://Escenas/Balas/bala.tscn" id="1_d3d2o"]
 [ext_resource type="Script" uid="uid://bkgkjcpo1nk73" path="res://vidas_jugador.gd" id="1_i3j75"]
-[ext_resource type="Texture2D" uid="uid://h8imy3rjyitq" path="res://Sprites/DOC-20260201-WA0002.png" id="2_bu8ox"]
 [ext_resource type="PackedScene" uid="uid://xfaymgsxccxp" path="res://Escenas/Jugador.tscn" id="2_spkme"]
-[ext_resource type="Texture2D" uid="uid://4q4h8oeukijj" path="res://Sprites/DOC-20260201-WA0001.png" id="3_fra74"]
 [ext_resource type="PackedScene" uid="uid://dcvqguf3ikyxs" path="res://Escenas/Balas/bala_2.tscn" id="3_spkme"]
 [ext_resource type="PackedScene" uid="uid://cyumrq7187rlg" path="res://Escenas/Balas/bala_3.tscn" id="4_n77xa"]
 [ext_resource type="PackedScene" uid="uid://ct6t224x6ues7" path="res://Escenas/fondo.tscn" id="5_aoscc"]
@@ -24,16 +22,6 @@ b = Vector2(0, 344)
 
 [node name="Juego" type="Node2D"]
 script = ExtResource("1_i3j75")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1195, 110.99998)
-scale = Vector2(0.19921875, 0.24023438)
-texture = ExtResource("2_bu8ox")
-
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(1193, 243)
-scale = Vector2(0.20312507, 0.23046884)
-texture = ExtResource("3_fra74")
 
 [node name="Bala" parent="." instance=ExtResource("1_d3d2o")]
 position = Vector2(632, 280)
@@ -76,7 +64,7 @@ position = Vector2(-634, 13)
 shape = SubResource("SegmentShape2D_i3j75")
 
 [node name="Ganar" type="Timer" parent="Camera2D"]
-wait_time = 2.0
+wait_time = 30.0
 
 [node name="Enemigo" parent="." instance=ExtResource("6_74bab")]
 
@@ -86,38 +74,6 @@ volume_db = -7.044
 pitch_scale = 1.04
 autoplay = true
 parameters/looping = false
-
-[node name="Label" type="Label" parent="."]
-offset_left = 1113.0
-offset_top = 118.0
-offset_right = 1162.0
-offset_bottom = 167.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 35
-text = "J"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Label2" type="Label" parent="."]
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = 1120.0
-offset_top = 250.0
-offset_right = 1169.0
-offset_bottom = 299.0
-grow_horizontal = 0
-grow_vertical = 2
-size_flags_horizontal = 4
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 35
-text = "K"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="Control" parent="." instance=ExtResource("7_i3j75")]
 

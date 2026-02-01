@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ut6lcwwlaabq"]
 
-[ext_resource type="Script" uid="uid://ba837o1qawkc6" path="res://enemigo.gd" id="1_e4o18"]
+[ext_resource type="Script" uid="uid://cy5i4yoknn4n5" path="res://enemigo_2.gd" id="1_e4o18"]
 [ext_resource type="Texture2D" uid="uid://c54yuciqs7cvi" path="res://Perro verde.png" id="2_gu1vk"]
 
 [node name="Enemigo2" type="Node2D"]
@@ -24,6 +24,10 @@ texture = ExtResource("2_gu1vk")
 
 [node name="shoot_timer3" type="Timer" parent="."]
 
+[node name="Spawn" type="Timer" parent="."]
+wait_time = 5.0
+
 [connection signal="timeout" from="shoot_timer" to="." method="_on_shoot_timer_timeout"]
 [connection signal="timeout" from="shoot_timer2" to="." method="_on_shoot_timer_2_timeout"]
 [connection signal="timeout" from="shoot_timer3" to="." method="_on_shoot_timer_3_timeout"]
+[connection signal="timeout" from="Spawn" to="." method="_on_spawn_timeout"]
