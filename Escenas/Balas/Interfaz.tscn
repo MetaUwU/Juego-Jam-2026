@@ -1,9 +1,9 @@
-[gd_scene format=3 uid="uid://u0cxj2a4kk0f"]
+[gd_scene load_steps=3 format=3 uid="uid://u0cxj2a4kk0f"]
 
-[ext_resource type="Texture2D" uid="uid://bvmb4h1a1g1qb" path="res://Placeholder/Noli M4.jpg" id="1_5273e"]
 [ext_resource type="Script" uid="uid://cs6s536ktjpmf" path="res://Escenas/Balas/interfaz.gd" id="1_m707h"]
+[ext_resource type="Texture2D" uid="uid://bu0ybul4bnke8" path="res://Placeholder/Noli.jpg" id="2_m707h"]
 
-[node name="Control" type="Control" unique_id=1339278605]
+[node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,22 +12,40 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_m707h")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1891744074]
-z_index = -2
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = 1
 layout_mode = 0
 offset_left = 12.0
-offset_top = 605.0
-offset_right = 295.0
+offset_top = 642.0
+offset_right = 113.0
 offset_bottom = 706.0
-texture = ExtResource("1_5273e")
+texture = ExtResource("2_m707h")
 expand_mode = 1
 
-[node name="Label" type="Label" parent="." unique_id=661244183]
+[node name="Label" type="RichTextLabel" parent="."]
 layout_mode = 0
 offset_left = 129.0
 offset_top = 619.0
-offset_right = 296.0
-offset_bottom = 642.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 50
-text = "Vidas"
+offset_right = 691.0
+offset_bottom = 688.0
+text = "Vidas : Vidasjugador.hp"
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 124.0
+offset_top = 641.0
+offset_right = 225.0
+offset_bottom = 705.0
+texture = ExtResource("2_m707h")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 235.0
+offset_top = 642.0
+offset_right = 336.0
+offset_bottom = 706.0
+texture = ExtResource("2_m707h")
+expand_mode = 1

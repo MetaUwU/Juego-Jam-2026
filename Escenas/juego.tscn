@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://buhfjrp6dgu11"]
+[gd_scene load_steps=14 format=3 uid="uid://buhfjrp6dgu11"]
 
 [ext_resource type="PackedScene" uid="uid://oaf5u6q0ipk6" path="res://Escenas/Balas/bala.tscn" id="1_d3d2o"]
 [ext_resource type="Script" uid="uid://bkgkjcpo1nk73" path="res://vidas_jugador.gd" id="1_i3j75"]
@@ -20,70 +20,68 @@ b = Vector2(634, 0)
 a = Vector2(-3, -379)
 b = Vector2(0, 344)
 
-[node name="Juego" type="Node2D" unique_id=1405927743]
+[node name="Juego" type="Node2D"]
 script = ExtResource("1_i3j75")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1538382392]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1195, 110.99998)
 scale = Vector2(0.19921875, 0.24023438)
 texture = ExtResource("2_bu8ox")
 
-[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1192123346]
+[node name="Sprite2D2" type="Sprite2D" parent="."]
 position = Vector2(1193, 243)
 scale = Vector2(0.20312507, 0.23046884)
 texture = ExtResource("3_fra74")
 
-[node name="Bala" parent="." unique_id=1873658672 instance=ExtResource("1_d3d2o")]
+[node name="Bala" parent="." instance=ExtResource("1_d3d2o")]
 position = Vector2(632, 280)
 
-[node name="Protagonista" parent="." unique_id=946902335 instance=ExtResource("2_spkme")]
+[node name="Protagonista" parent="." instance=ExtResource("2_spkme")]
 position = Vector2(344, 634)
 
-[node name="Bala_2" parent="." unique_id=939627392 instance=ExtResource("3_spkme")]
+[node name="Bala_2" parent="." instance=ExtResource("3_spkme")]
 position = Vector2(745, 106)
 
-[node name="Bala_3" parent="." unique_id=1297948553 instance=ExtResource("4_n77xa")]
+[node name="Bala_3" parent="." instance=ExtResource("4_n77xa")]
 position = Vector2(484, 122)
 
-[node name="fondo" parent="." unique_id=390368435 instance=ExtResource("5_aoscc")]
+[node name="fondo" parent="." instance=ExtResource("5_aoscc")]
 visibility_layer = 261
 scroll_offset = Vector2(6, 6)
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=588784379]
+[node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(638, 361)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Camera2D" unique_id=885804140]
+[node name="StaticBody2D" type="StaticBody2D" parent="Camera2D"]
 collision_layer = 128
 collision_mask = 0
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Camera2D/StaticBody2D" unique_id=3840046]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Camera2D/StaticBody2D"]
 position = Vector2(8, -359)
 shape = SubResource("SegmentShape2D_74bab")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/StaticBody2D" unique_id=1768648228]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/StaticBody2D"]
 position = Vector2(4, 360)
 shape = SubResource("SegmentShape2D_74bab")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Camera2D/StaticBody2D" unique_id=1520839472]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Camera2D/StaticBody2D"]
 position = Vector2(643, 12)
 shape = SubResource("SegmentShape2D_i3j75")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Camera2D/StaticBody2D" unique_id=1549217571]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Camera2D/StaticBody2D"]
 position = Vector2(-634, 13)
 shape = SubResource("SegmentShape2D_i3j75")
 
-[node name="Control" parent="." unique_id=696619985 instance=ExtResource("7_i3j75")]
+[node name="Enemigo" parent="." instance=ExtResource("6_74bab")]
 
-[node name="Enemigo" parent="." unique_id=628387599 instance=ExtResource("6_74bab")]
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1382172161]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_va84l")
 volume_db = -7.044
 pitch_scale = 1.04
 autoplay = true
 parameters/looping = false
 
-[node name="Label" type="Label" parent="." unique_id=1152855256]
+[node name="Label" type="Label" parent="."]
 offset_left = 1113.0
 offset_top = 118.0
 offset_right = 1162.0
@@ -95,7 +93,7 @@ text = "J"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="." unique_id=408977344]
+[node name="Label2" type="Label" parent="."]
 anchors_preset = 6
 anchor_left = 1.0
 anchor_top = 0.5
@@ -114,3 +112,5 @@ theme_override_font_sizes/font_size = 35
 text = "K"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Control" parent="." instance=ExtResource("7_i3j75")]
