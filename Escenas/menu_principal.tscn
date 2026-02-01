@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c3bigo07k27wq" path="res://Escenas/menu_principal.gd" id="1_qncgo"]
 [ext_resource type="Texture2D" uid="uid://bu0ybul4bnke8" path="res://Placeholder/Noli.jpg" id="2_bmgc8"]
-[ext_resource type="Texture2D" uid="uid://bx4dg7ki7od55" path="res://Placeholder/YAAI Noli.png" id="3_d8lex"]
+[ext_resource type="Texture2D" uid="uid://brcbee6tc3q0t" path="res://Sprites/Fondo menu.png" id="3_qncgo"]
 
 [node name="Menu principal" type="Control"]
 layout_mode = 3
@@ -24,9 +24,9 @@ icon = ExtResource("2_bmgc8")
 layer = -1
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(640.25, 360)
-scale = Vector2(3.0464287, 1.7380952)
-texture = ExtResource("3_d8lex")
+position = Vector2(640.5, 350.99994)
+scale = Vector2(1.2509766, 0.7304687)
+texture = ExtResource("3_qncgo")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
