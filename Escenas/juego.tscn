@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dcvqguf3ikyxs" path="res://Escenas/Balas/bala_2.tscn" id="3_spkme"]
 [ext_resource type="PackedScene" uid="uid://cyumrq7187rlg" path="res://Escenas/Balas/bala_3.tscn" id="4_n77xa"]
 [ext_resource type="PackedScene" uid="uid://ct6t224x6ues7" path="res://Escenas/fondo.tscn" id="5_aoscc"]
-[ext_resource type="PackedScene" uid="uid://dvmw3xsmecpfo" path="res://Escenas/Balas/enemigo.tscn" id="6_74bab"]
+[ext_resource type="PackedScene" uid="uid://dvmw3xsmecpfo" path="res://Escenas/enemigo.tscn" id="6_74bab"]
 
 [node name="Juego" type="Node2D"]
 
