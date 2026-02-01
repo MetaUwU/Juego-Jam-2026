@@ -6,12 +6,15 @@ func _ready() -> void:
 	$TextureRect.show()
 	$TextureRect2.show()
 	$TextureRect3.show()
-	
+	$Timer.start()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	$Label5.text = str(int($Timer.time_left))
+	
 	$Label.text = str(3)
+	
 	if VidasJugador.hp == 2:
 		$TextureRect3.hide()
 		$Label.text = str(2)
