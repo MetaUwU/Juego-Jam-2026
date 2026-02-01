@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://dup5nthi806vu"]
 
-[ext_resource type="Script" uid="uid://c3bigo07k27wq" path="res://Escenas/menu_principal.gd" id="1_egrp4"]
-[ext_resource type="Texture2D" uid="uid://bu0ybul4bnke8" path="res://Placeholder/Noli.jpg" id="2_yehaw"]
+[ext_resource type="Script" uid="uid://cpc4gm5awvw3v" path="res://menu_de_ganar.gd" id="1_egrp4"]
+[ext_resource type="Texture2D" uid="uid://bb6xifgkb34cq" path="res://Menu boton.png" id="2_egrp4"]
 [ext_resource type="Script" uid="uid://bd8hntg5pbswf" path="res://Escenas/button.gd" id="3_srr50"]
 [ext_resource type="Texture2D" uid="uid://brcbee6tc3q0t" path="res://Sprites/Fondo menu.png" id="4_bpr2f"]
 [ext_resource type="AudioStream" uid="uid://2cqp7bg0pkv4" path="res://Audio/SFX/Pickup.wav" id="5_qrjhp"]
@@ -16,12 +16,12 @@ script = ExtResource("1_egrp4")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 477.0
-offset_top = 278.0
-offset_right = 757.0
-offset_bottom = 537.0
-text = "Jugar otra vez"
-icon = ExtResource("2_yehaw")
+offset_left = 362.0
+offset_top = 200.0
+offset_right = 882.0
+offset_bottom = 720.0
+icon = ExtResource("2_egrp4")
+flat = true
 script = ExtResource("3_srr50")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -35,10 +35,10 @@ texture = ExtResource("4_bpr2f")
 [node name="Label" type="Label" parent="."]
 modulate = Color(0, 0, 0, 1)
 layout_mode = 0
-offset_left = 346.0
-offset_top = 25.0
-offset_right = 822.0
-offset_bottom = 112.0
+offset_left = 254.0
+offset_top = 23.0
+offset_right = 920.0
+offset_bottom = 288.0
 theme_override_constants/outline_size = 4
 theme_override_font_sizes/font_size = 64
 text = "GANASTE!!!"

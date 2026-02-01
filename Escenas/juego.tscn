@@ -27,7 +27,7 @@ script = ExtResource("1_i3j75")
 position = Vector2(632, 280)
 
 [node name="Protagonista" parent="." instance=ExtResource("2_spkme")]
-position = Vector2(344, 634)
+position = Vector2(638, 521)
 
 [node name="Bala_2" parent="." instance=ExtResource("3_spkme")]
 position = Vector2(745, 106)

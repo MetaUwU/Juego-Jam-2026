@@ -1,62 +1,125 @@
-[gd_scene format=3 uid="uid://bsdth62ym3jxr"]
+[gd_scene load_steps=13 format=3 uid="uid://bsdth62ym3jxr"]
 
 [ext_resource type="Script" uid="uid://c3bigo07k27wq" path="res://Escenas/menu_principal.gd" id="1_qncgo"]
-[ext_resource type="Texture2D" uid="uid://bu0ybul4bnke8" path="res://Placeholder/Noli.jpg" id="2_bmgc8"]
+[ext_resource type="Texture2D" uid="uid://civab4ox1lwix" path="res://jugar boton.png" id="2_e2nb3"]
 [ext_resource type="Script" uid="uid://bd8hntg5pbswf" path="res://Escenas/button.gd" id="3_d8lex"]
 [ext_resource type="Texture2D" uid="uid://brcbee6tc3q0t" path="res://Sprites/Fondo menu.png" id="3_qncgo"]
 [ext_resource type="AudioStream" uid="uid://2cqp7bg0pkv4" path="res://Audio/SFX/Pickup.wav" id="4_yo4kt"]
 [ext_resource type="AudioStream" uid="uid://dnx8q3ho2ep3k" path="res://Audio/Music/Main Menu 32 Bits.mp3" id="6_yo4kt"]
+[ext_resource type="Texture2D" uid="uid://v3ep6ta0r0xj" path="res://Mask imagen.png" id="7_j2d8q"]
+[ext_resource type="Texture2D" uid="uid://boutcmlvffdno" path="res://Reflection.png" id="8_opkeq"]
+[ext_resource type="Texture2D" uid="uid://chb32u1n3fiee" path="res://Lucia de costado.png" id="9_c8vt5"]
+[ext_resource type="Texture2D" uid="uid://h8imy3rjyitq" path="res://Sprites/DOC-20260201-WA0002.png" id="10_pg8rb"]
+[ext_resource type="Texture2D" uid="uid://cx2v5ljfogeq8" path="res://Mascara Azul.png" id="11_m202y"]
+[ext_resource type="Texture2D" uid="uid://4q4h8oeukijj" path="res://Sprites/DOC-20260201-WA0001.png" id="12_vhl05"]
 
-[node name="Menu principal" type="Control" unique_id=939339934]
+[node name="Menu principal" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1281.0
 offset_bottom = 725.0
 script = ExtResource("1_qncgo")
 
-[node name="Button" type="Button" parent="." unique_id=1220491429]
+[node name="Button" type="Button" parent="."]
+z_index = 2
 layout_mode = 0
-offset_left = 477.0
-offset_top = 278.0
-offset_right = 757.0
-offset_bottom = 537.0
-text = "Jugar"
-icon = ExtResource("2_bmgc8")
+offset_left = 390.0
+offset_top = 438.0
+offset_right = 910.0
+offset_bottom = 958.0
+icon = ExtResource("2_e2nb3")
+flat = true
 script = ExtResource("3_d8lex")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1070996893]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1
 
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=848246844]
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
 position = Vector2(640.5, 350.99994)
 scale = Vector2(1.2509766, 0.7304687)
 texture = ExtResource("3_qncgo")
 
-[node name="Label" type="Label" parent="." unique_id=532521468]
-modulate = Color(0, 0, 0, 1)
-layout_mode = 0
-offset_left = 346.0
-offset_top = 25.0
-offset_right = 822.0
-offset_bottom = 112.0
-theme_override_constants/outline_size = 4
-theme_override_font_sizes/font_size = 64
-text = "Mask
- Survival"
-horizontal_alignment = 1
-
-[node name="Sprite2D" type="Sprite2D" parent="Label" unique_id=42324777]
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1879791414]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_yo4kt")
 volume_db = 0.084
 
-[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=1452757319]
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_yo4kt")
 volume_db = -15.551
 pitch_scale = 1.3
 autoplay = true
 parameters/looping = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+light_mask = 0
+z_index = -1
+layout_mode = 0
+offset_left = 203.0
+offset_top = -330.0
+offset_right = 1227.0
+offset_bottom = 694.0
+mouse_filter = 2
+texture = ExtResource("7_j2d8q")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+light_mask = 0
+z_index = -1
+layout_mode = 0
+offset_left = 272.0
+offset_top = -263.0
+offset_right = 1296.0
+offset_bottom = 761.0
+mouse_filter = 2
+texture = ExtResource("8_opkeq")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+light_mask = 0
+z_index = -1
+layout_mode = 0
+offset_left = 175.0
+offset_top = 266.0
+offset_right = 537.0
+offset_bottom = 628.0
+mouse_filter = 2
+texture = ExtResource("9_c8vt5")
+expand_mode = 1
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+light_mask = 0
+z_index = -1
+layout_mode = 0
+offset_left = 930.0
+offset_top = 119.0
+offset_right = 1132.0
+offset_bottom = 321.0
+mouse_filter = 2
+texture = ExtResource("10_pg8rb")
+expand_mode = 1
+
+[node name="TextureRect5" type="TextureRect" parent="."]
+light_mask = 0
+z_index = -1
+layout_mode = 0
+offset_left = 505.0
+offset_top = 250.0
+offset_right = 707.0
+offset_bottom = 452.0
+mouse_filter = 2
+texture = ExtResource("11_m202y")
+expand_mode = 1
+
+[node name="TextureRect6" type="TextureRect" parent="."]
+light_mask = 0
+z_index = -1
+layout_mode = 0
+offset_left = 55.0
+offset_top = 99.0
+offset_right = 257.0
+offset_bottom = 301.0
+mouse_filter = 2
+texture = ExtResource("12_vhl05")
+expand_mode = 1
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
