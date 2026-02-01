@@ -11,9 +11,16 @@ func _process(delta):
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	print("daño")
 	print(VidasJugador.hp)
-	VidasJugador.hp -= 1
+	if VidasJugador.iframes == false:
+		VidasJugador.hp -= 1
+	VidasJugador.iframes = true
+	$Invincibility.start()
 	if VidasJugador.hp == 0:
 		get_tree().change_scene_to_file("res://Escenas/Balas/menu_de_perder.tscn")
 
 func _on_killtimer_timeout():
 	queue_free()
+
+
+func _on_invincibility_timeout() -> void:
+	VidasJugador.iframes = false
