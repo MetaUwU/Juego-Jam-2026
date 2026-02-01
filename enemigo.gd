@@ -13,7 +13,7 @@ const bala_3 = preload("res://Escenas/Balas/bala_3.tscn")
 
 const rotate_speed = 100
 const rotate_speed2 = 150.5
-const rotate_speed3 = 200
+const rotate_speed3 = 200.25
 const shooter_timer_wait_time = 0.2
 const spawn_point_count = 4
 const radius = 100
@@ -49,7 +49,6 @@ func _ready() -> void:
 	
 	shoot_timer2.wait_time = shooter_timer2_wait_time
 	shoot_timer2.start()
-	print("timer2")
 	
 	shoot_timer3.wait_time = shooter_timer3_wait_time
 	shoot_timer3.start()
@@ -72,13 +71,12 @@ func _on_shoot_timer_timeout() -> void:
 		b1.rotation = s.global_rotation
 
 func _on_shoot_timer_2_timeout() -> void:
-	print("timer2")
 	for d in rotater2.get_children():
 		var b2 = bala_2.instantiate()
 		get_tree().root.add_child(b2)
 		b2.position = d.global_position
 		b2.rotation = d.global_rotation
-		print("noli2")
+
 
 
 func _on_shoot_timer_3_timeout() -> void:
@@ -87,4 +85,3 @@ func _on_shoot_timer_3_timeout() -> void:
 		get_tree().root.add_child(b3)
 		b3.position = l.global_position
 		b3.rotation = l.global_rotation
-		print("noli3")

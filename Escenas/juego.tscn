@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://buhfjrp6dgu11"]
+[gd_scene load_steps=7 format=3 uid="uid://buhfjrp6dgu11"]
 
 [ext_resource type="PackedScene" uid="uid://oaf5u6q0ipk6" path="res://Escenas/Balas/bala.tscn" id="1_d3d2o"]
 [ext_resource type="PackedScene" uid="uid://xfaymgsxccxp" path="res://Escenas/Jugador.tscn" id="2_spkme"]
 [ext_resource type="PackedScene" uid="uid://dcvqguf3ikyxs" path="res://Escenas/Balas/bala_2.tscn" id="3_spkme"]
 [ext_resource type="PackedScene" uid="uid://cyumrq7187rlg" path="res://Escenas/Balas/bala_3.tscn" id="4_n77xa"]
 [ext_resource type="PackedScene" uid="uid://ct6t224x6ues7" path="res://Escenas/fondo.tscn" id="5_aoscc"]
+[ext_resource type="PackedScene" uid="uid://dvmw3xsmecpfo" path="res://Escenas/Balas/enemigo.tscn" id="6_74bab"]
 
 [node name="Juego" type="Node2D"]
 
@@ -21,3 +22,5 @@ position = Vector2(484, 122)
 
 [node name="fondo" parent="." instance=ExtResource("5_aoscc")]
 scroll_offset = Vector2(-58, -17)
+
+[node name="Enemigo" parent="." instance=ExtResource("6_74bab")]
