@@ -28,4 +28,15 @@ position = Vector2(640.25, 360)
 scale = Vector2(3.0464287, 1.7380952)
 texture = ExtResource("3_d8lex")
 
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 346.0
+offset_top = 25.0
+offset_right = 822.0
+offset_bottom = 112.0
+text = "Juego sin nombre todavia"
+horizontal_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Label"]
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
