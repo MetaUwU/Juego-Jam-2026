@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://ut6lcwwlaabq"]
+
+[ext_resource type="Script" uid="uid://ba837o1qawkc6" path="res://enemigo.gd" id="1_e4o18"]
+[ext_resource type="Texture2D" uid="uid://c54yuciqs7cvi" path="res://Perro verde.png" id="2_gu1vk"]
+
+[node name="Enemigo2" type="Node2D"]
+position = Vector2(364, 114)
+script = ExtResource("1_e4o18")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(18.000004, -43)
+scale = Vector2(0.21484372, 0.17773439)
+texture = ExtResource("2_gu1vk")
+
+[node name="Rotater" type="Node2D" parent="."]
+
+[node name="shoot_timer" type="Timer" parent="."]
+
+[node name="Rotater2" type="Node2D" parent="."]
+
+[node name="Rotater3" type="Node2D" parent="."]
+
+[node name="shoot_timer2" type="Timer" parent="."]
+
+[node name="shoot_timer3" type="Timer" parent="."]
+
+[connection signal="timeout" from="shoot_timer" to="." method="_on_shoot_timer_timeout"]
+[connection signal="timeout" from="shoot_timer2" to="." method="_on_shoot_timer_2_timeout"]
+[connection signal="timeout" from="shoot_timer3" to="." method="_on_shoot_timer_3_timeout"]

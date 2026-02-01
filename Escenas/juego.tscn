@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://buhfjrp6dgu11"]
+[gd_scene load_steps=16 format=3 uid="uid://buhfjrp6dgu11"]
 
 [ext_resource type="PackedScene" uid="uid://oaf5u6q0ipk6" path="res://Escenas/Balas/bala.tscn" id="1_d3d2o"]
 [ext_resource type="Script" uid="uid://bkgkjcpo1nk73" path="res://vidas_jugador.gd" id="1_i3j75"]
@@ -10,7 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://ct6t224x6ues7" path="res://Escenas/fondo.tscn" id="5_aoscc"]
 [ext_resource type="PackedScene" uid="uid://dvmw3xsmecpfo" path="res://Escenas/enemigo.tscn" id="6_74bab"]
 [ext_resource type="PackedScene" uid="uid://u0cxj2a4kk0f" path="res://Escenas/Balas/Interfaz.tscn" id="7_i3j75"]
+[ext_resource type="Script" uid="uid://bcv23x1y5exii" path="res://Escenas/camera_2d.gd" id="9_7x40w"]
 [ext_resource type="AudioStream" uid="uid://frw3q85y2kpj" path="res://Audio/Music/Bullet-Hell-Overdrive.ogg" id="9_va84l"]
+[ext_resource type="PackedScene" uid="uid://ut6lcwwlaabq" path="res://enemigo_2.tscn" id="10_fra74"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_74bab"]
 a = Vector2(-644, 1)
@@ -51,6 +53,7 @@ scroll_offset = Vector2(6, 6)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(638, 361)
+script = ExtResource("9_7x40w")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Camera2D"]
 collision_layer = 128
@@ -71,6 +74,9 @@ shape = SubResource("SegmentShape2D_i3j75")
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Camera2D/StaticBody2D"]
 position = Vector2(-634, 13)
 shape = SubResource("SegmentShape2D_i3j75")
+
+[node name="Ganar" type="Timer" parent="Camera2D"]
+wait_time = 2.0
 
 [node name="Enemigo" parent="." instance=ExtResource("6_74bab")]
 
@@ -114,3 +120,9 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Control" parent="." instance=ExtResource("7_i3j75")]
+
+[node name="Enemigo2" parent="." instance=ExtResource("10_fra74")]
+position = Vector2(899, 132)
+
+[connection signal="timeout" from="Camera2D/Ganar" to="." method="_on_ganar_timeout"]
+[connection signal="timeout" from="Camera2D/Ganar" to="Camera2D" method="_on_ganar_timeout"]
