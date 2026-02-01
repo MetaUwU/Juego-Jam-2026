@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://xfaymgsxccxp"]
+[gd_scene format=3 uid="uid://xfaymgsxccxp"]
 
 [ext_resource type="Script" uid="uid://cvtycaxdwao4p" path="res://jugador.gd" id="1_pqx3y"]
 [ext_resource type="Script" uid="uid://ca4rfcn0tbb81" path="res://Escenas/hitbox_prota.gd" id="2_8g85c"]
@@ -9,7 +9,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pfvk3"]
 size = Vector2(40, 42)
 
-[node name="Protagonista" type="CharacterBody2D"]
+[node name="Protagonista" type="CharacterBody2D" unique_id=807532850]
 position = Vector2(197, 216)
 disable_mode = 1
 collision_layer = 129
@@ -17,22 +17,24 @@ collision_mask = 129
 script = ExtResource("1_pqx3y")
 metadata/_edit_group_ = true
 
-[node name="Hitbox_prota" type="CollisionShape2D" parent="."]
+[node name="Hitbox_prota" type="CollisionShape2D" parent="." unique_id=1538779500]
 shape = SubResource("RectangleShape2D_pfvk3")
 debug_color = Color(1, 0.05490196, 0.19215687, 0.41960785)
 script = ExtResource("2_8g85c")
 
-[node name="Sprite_prota_1" type="Sprite2D" parent="."]
+[node name="Sprite_prota_1" type="Sprite2D" parent="." unique_id=1125698376]
 scale = Vector2(0.16796874, 0.19314088)
 texture = ExtResource("3_muoba")
 
-[node name="Animacion_prota" type="AnimationPlayer" parent="."]
+[node name="Animacion_prota" type="AnimationPlayer" parent="." unique_id=1438434085]
 
-[node name="Sprite_prota_2" type="Sprite2D" parent="."]
+[node name="Sprite_prota_2" type="Sprite2D" parent="." unique_id=2066305223]
+visible = false
 position = Vector2(1.9073486e-06, 1.7166138e-05)
 scale = Vector2(0.18359372, 0.1953126)
 texture = ExtResource("4_fwv5a")
 
-[node name="Sprite_prota_3" type="Sprite2D" parent="."]
+[node name="Sprite_prota_3" type="Sprite2D" parent="." unique_id=176181152]
+visible = false
 scale = Vector2(0.2761905, 0.29047617)
 texture = ExtResource("5_fwv5a")

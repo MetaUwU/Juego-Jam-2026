@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dnx8q3ho2ep3k"
+path="res://.godot/imported/Main Menu 32 Bits.mp3-2d91ea2c0168493fe4dce06f3bc0de2f.mp3str"
+
+[deps]
+
+source_file="res://Audio/Music/Main Menu 32 Bits.mp3"
+dest_files=["res://.godot/imported/Main Menu 32 Bits.mp3-2d91ea2c0168493fe4dce06f3bc0de2f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,13 +1,16 @@
-[gd_scene load_steps=11 format=3 uid="uid://buhfjrp6dgu11"]
+[gd_scene format=3 uid="uid://buhfjrp6dgu11"]
 
 [ext_resource type="PackedScene" uid="uid://oaf5u6q0ipk6" path="res://Escenas/Balas/bala.tscn" id="1_d3d2o"]
 [ext_resource type="Script" uid="uid://bkgkjcpo1nk73" path="res://vidas_jugador.gd" id="1_i3j75"]
+[ext_resource type="Texture2D" uid="uid://h8imy3rjyitq" path="res://Sprites/DOC-20260201-WA0002.png" id="2_bu8ox"]
 [ext_resource type="PackedScene" uid="uid://xfaymgsxccxp" path="res://Escenas/Jugador.tscn" id="2_spkme"]
+[ext_resource type="Texture2D" uid="uid://4q4h8oeukijj" path="res://Sprites/DOC-20260201-WA0001.png" id="3_fra74"]
 [ext_resource type="PackedScene" uid="uid://dcvqguf3ikyxs" path="res://Escenas/Balas/bala_2.tscn" id="3_spkme"]
 [ext_resource type="PackedScene" uid="uid://cyumrq7187rlg" path="res://Escenas/Balas/bala_3.tscn" id="4_n77xa"]
 [ext_resource type="PackedScene" uid="uid://ct6t224x6ues7" path="res://Escenas/fondo.tscn" id="5_aoscc"]
 [ext_resource type="PackedScene" uid="uid://dvmw3xsmecpfo" path="res://Escenas/enemigo.tscn" id="6_74bab"]
 [ext_resource type="PackedScene" uid="uid://u0cxj2a4kk0f" path="res://Escenas/Balas/Interfaz.tscn" id="7_i3j75"]
+[ext_resource type="AudioStream" uid="uid://frw3q85y2kpj" path="res://Audio/Music/Bullet-Hell-Overdrive.ogg" id="9_va84l"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_74bab"]
 a = Vector2(-644, 1)
@@ -17,47 +20,97 @@ b = Vector2(634, 0)
 a = Vector2(-3, -379)
 b = Vector2(0, 344)
 
-[node name="Juego" type="Node2D"]
+[node name="Juego" type="Node2D" unique_id=1405927743]
 script = ExtResource("1_i3j75")
 
-[node name="Bala" parent="." instance=ExtResource("1_d3d2o")]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1538382392]
+position = Vector2(1195, 110.99998)
+scale = Vector2(0.19921875, 0.24023438)
+texture = ExtResource("2_bu8ox")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1192123346]
+position = Vector2(1193, 243)
+scale = Vector2(0.20312507, 0.23046884)
+texture = ExtResource("3_fra74")
+
+[node name="Bala" parent="." unique_id=1873658672 instance=ExtResource("1_d3d2o")]
 position = Vector2(632, 280)
 
-[node name="Protagonista" parent="." instance=ExtResource("2_spkme")]
+[node name="Protagonista" parent="." unique_id=946902335 instance=ExtResource("2_spkme")]
 position = Vector2(344, 634)
 
-[node name="Bala_2" parent="." instance=ExtResource("3_spkme")]
+[node name="Bala_2" parent="." unique_id=939627392 instance=ExtResource("3_spkme")]
 position = Vector2(745, 106)
 
-[node name="Bala_3" parent="." instance=ExtResource("4_n77xa")]
+[node name="Bala_3" parent="." unique_id=1297948553 instance=ExtResource("4_n77xa")]
 position = Vector2(484, 122)
 
-[node name="fondo" parent="." instance=ExtResource("5_aoscc")]
-scroll_offset = Vector2(-3, -3)
+[node name="fondo" parent="." unique_id=390368435 instance=ExtResource("5_aoscc")]
+visibility_layer = 261
+scroll_offset = Vector2(6, 6)
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=588784379]
 position = Vector2(638, 361)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Camera2D"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Camera2D" unique_id=885804140]
 collision_layer = 128
 collision_mask = 0
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Camera2D/StaticBody2D"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Camera2D/StaticBody2D" unique_id=3840046]
 position = Vector2(8, -359)
 shape = SubResource("SegmentShape2D_74bab")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/StaticBody2D" unique_id=1768648228]
 position = Vector2(4, 360)
 shape = SubResource("SegmentShape2D_74bab")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Camera2D/StaticBody2D"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Camera2D/StaticBody2D" unique_id=1520839472]
 position = Vector2(643, 12)
 shape = SubResource("SegmentShape2D_i3j75")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Camera2D/StaticBody2D"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Camera2D/StaticBody2D" unique_id=1549217571]
 position = Vector2(-634, 13)
 shape = SubResource("SegmentShape2D_i3j75")
 
-[node name="Control" parent="." instance=ExtResource("7_i3j75")]
+[node name="Control" parent="." unique_id=696619985 instance=ExtResource("7_i3j75")]
 
-[node name="Enemigo" parent="." instance=ExtResource("6_74bab")]
+[node name="Enemigo" parent="." unique_id=628387599 instance=ExtResource("6_74bab")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1382172161]
+stream = ExtResource("9_va84l")
+volume_db = -7.044
+pitch_scale = 1.04
+autoplay = true
+parameters/looping = false
+
+[node name="Label" type="Label" parent="." unique_id=1152855256]
+offset_left = 1113.0
+offset_top = 118.0
+offset_right = 1162.0
+offset_bottom = 167.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "J"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=408977344]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 1120.0
+offset_top = 250.0
+offset_right = 1169.0
+offset_bottom = 299.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "K"
+horizontal_alignment = 1
+vertical_alignment = 1

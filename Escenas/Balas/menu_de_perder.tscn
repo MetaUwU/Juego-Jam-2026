@@ -1,34 +1,44 @@
-[gd_scene load_steps=4 format=3 uid="uid://b45on63sln87o"]
+[gd_scene format=3 uid="uid://b45on63sln87o"]
 
 [ext_resource type="Script" uid="uid://yjo66bsby5sv" path="res://menu_de_perder.gd" id="1_df3qg"]
-[ext_resource type="Texture2D" uid="uid://bx4dg7ki7od55" path="res://Placeholder/YAAI Noli.png" id="2_vgi2i"]
-[ext_resource type="Texture2D" uid="uid://brcbee6tc3q0t" path="res://Sprites/Fondo menu.png" id="3_ehpvq"]
+[ext_resource type="Texture2D" uid="uid://ot0x4y7qk6um" path="res://Sprites/360_F_1504733558_5Fxq75beNmpTJsGPBMgudwoeSe3Cse4L.jpg" id="2_df3qg"]
+[ext_resource type="AudioStream" uid="uid://ud1l5ke5xch3" path="res://Audio/Music/Game_over.mp3" id="3_vgi2i"]
+[ext_resource type="AudioStream" uid="uid://2cqp7bg0pkv4" path="res://Audio/SFX/Pickup.wav" id="4_vgi2i"]
 
-[node name="Menu de perder" type="Control"]
+[node name="Menu de perder" type="Control" unique_id=1691815663]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1281.0
 offset_bottom = 725.0
 script = ExtResource("1_df3qg")
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="." unique_id=1199526319]
 layout_mode = 0
-offset_left = 378.0
-offset_top = 166.0
-offset_right = 917.0
-offset_bottom = 594.0
-text = "Jugar otra vez"
-icon = ExtResource("2_vgi2i")
+offset_left = 821.0
+offset_top = 446.0
+offset_right = 979.0
+offset_bottom = 540.0
+theme_override_font_sizes/font_size = 50
+text = "MENU"
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="Jugar" type="Button" parent="." unique_id=1894172558]
+layout_mode = 0
+offset_left = 219.0
+offset_top = 446.0
+offset_right = 377.0
+offset_bottom = 540.0
+theme_override_font_sizes/font_size = 50
+text = "JUGAR"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=834184193]
 layer = -1
 
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(640.5, 350.99994)
-scale = Vector2(1.2509766, 0.7304687)
-texture = ExtResource("3_ehpvq")
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=2005213338]
+position = Vector2(644.50006, 357.49994)
+scale = Vector2(2.020281, 1.9027778)
+texture = ExtResource("2_df3qg")
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=1945554800]
 layout_mode = 0
 offset_left = 346.0
 offset_top = 25.0
@@ -37,6 +47,19 @@ offset_bottom = 112.0
 text = "perdiste"
 horizontal_alignment = 1
 
-[node name="Sprite2D" type="Sprite2D" parent="Label"]
+[node name="Sprite2D" type="Sprite2D" parent="Label" unique_id=195593097]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=901854460]
+stream = ExtResource("3_vgi2i")
+volume_db = -6.804
+autoplay = true
+parameters/looping = true
+
+[node name="seleccionar" type="AudioStreamPlayer" parent="." unique_id=1499964801]
+stream = ExtResource("4_vgi2i")
+volume_db = 1.0
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Jugar" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="Jugar" to="." method="_on_button_2_pressed"]

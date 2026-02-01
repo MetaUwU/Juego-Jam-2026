@@ -14,6 +14,6 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	VidasJugador.hp -= 1
 	if VidasJugador.hp == 0:
 		get_tree().change_scene_to_file("res://Escenas/Balas/menu_de_perder.tscn")
-	
+
 func _on_killtimer_timeout():
 	queue_free()
