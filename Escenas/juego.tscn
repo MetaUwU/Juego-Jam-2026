@@ -64,7 +64,7 @@ position = Vector2(-634, 13)
 shape = SubResource("SegmentShape2D_i3j75")
 
 [node name="Ganar" type="Timer" parent="Camera2D"]
-wait_time = 30.0
+wait_time = 20.0
 
 [node name="Enemigo" parent="." instance=ExtResource("6_74bab")]
 
@@ -80,5 +80,5 @@ parameters/looping = false
 [node name="Enemigo2" parent="." instance=ExtResource("10_fra74")]
 position = Vector2(899, 132)
 
-[connection signal="timeout" from="Camera2D/Ganar" to="." method="_on_ganar_timeout"]
+[connection signal="timeout" from="Camera2D/Ganar" to="Bala" method="_on_ganar_timeout"]
 [connection signal="timeout" from="Camera2D/Ganar" to="Camera2D" method="_on_ganar_timeout"]

@@ -1,15 +1,15 @@
-[gd_scene format=3 uid="uid://xfaymgsxccxp"]
+[gd_scene load_steps=7 format=3 uid="uid://xfaymgsxccxp"]
 
 [ext_resource type="Script" uid="uid://cvtycaxdwao4p" path="res://jugador.gd" id="1_pqx3y"]
 [ext_resource type="Script" uid="uid://ca4rfcn0tbb81" path="res://Escenas/hitbox_prota.gd" id="2_8g85c"]
 [ext_resource type="Texture2D" uid="uid://cd6x1s54xx0iy" path="res://Sprites/Lucia morada.png" id="3_muoba"]
 [ext_resource type="Texture2D" uid="uid://bsgimokp3yhf6" path="res://Sprites/Lucia furra verde.png" id="4_fwv5a"]
-[ext_resource type="Texture2D" uid="uid://bx4dg7ki7od55" path="res://Placeholder/YAAI Noli.png" id="5_fwv5a"]
+[ext_resource type="Texture2D" uid="uid://j7t54p7idvo6" path="res://Lucia furra roja.png" id="5_muoba"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pfvk3"]
 size = Vector2(40, 42)
 
-[node name="Protagonista" type="CharacterBody2D" unique_id=807532850]
+[node name="Protagonista" type="CharacterBody2D"]
 position = Vector2(197, 216)
 disable_mode = 1
 collision_layer = 129
@@ -17,24 +17,22 @@ collision_mask = 129
 script = ExtResource("1_pqx3y")
 metadata/_edit_group_ = true
 
-[node name="Hitbox_prota" type="CollisionShape2D" parent="." unique_id=1538779500]
+[node name="Hitbox_prota" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_pfvk3")
 debug_color = Color(1, 0.05490196, 0.19215687, 0.41960785)
 script = ExtResource("2_8g85c")
 
-[node name="Sprite_prota_1" type="Sprite2D" parent="." unique_id=1125698376]
+[node name="Sprite_prota_1" type="Sprite2D" parent="."]
 scale = Vector2(0.16796874, 0.19314088)
 texture = ExtResource("3_muoba")
 
-[node name="Animacion_prota" type="AnimationPlayer" parent="." unique_id=1438434085]
+[node name="Animacion_prota" type="AnimationPlayer" parent="."]
 
-[node name="Sprite_prota_2" type="Sprite2D" parent="." unique_id=2066305223]
-visible = false
+[node name="Sprite_prota_2" type="Sprite2D" parent="."]
 position = Vector2(1.9073486e-06, 1.7166138e-05)
-scale = Vector2(0.18359372, 0.1953126)
+scale = Vector2(0.18359376, 0.19140631)
 texture = ExtResource("4_fwv5a")
 
-[node name="Sprite_prota_3" type="Sprite2D" parent="." unique_id=176181152]
-visible = false
-scale = Vector2(0.2761905, 0.29047617)
-texture = ExtResource("5_fwv5a")
+[node name="Sprite_prota_3" type="Sprite2D" parent="."]
+scale = Vector2(0.18359376, 0.19531244)
+texture = ExtResource("5_muoba")

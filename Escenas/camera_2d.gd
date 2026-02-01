@@ -9,6 +9,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-
 func _on_ganar_timeout() -> void:
+	VidasJugador.ganaste = true
 	get_tree().change_scene_to_file("res://menu_de_ganar.tscn")

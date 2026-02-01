@@ -3,6 +3,11 @@ extends CharacterBody2D
 var SPEED = 300
 var direccion
 
+func _ready() -> void:
+	$Sprite_prota_1.visible = true
+	$Sprite_prota_2.visible = false
+	$Sprite_prota_3.visible = false
+
 func _physics_process(delta: float) -> void:
 	
 	direccion = Vector2(Input.get_axis("Mover_Izquierda","Mover_Derecha"),Input.get_axis("Mover_Arriba","Mover_Abajo" )).normalized()

@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://u0cxj2a4kk0f"]
 
 [ext_resource type="Script" uid="uid://cs6s536ktjpmf" path="res://Escenas/Balas/interfaz.gd" id="1_m707h"]
-[ext_resource type="Texture2D" uid="uid://bu0ybul4bnke8" path="res://Placeholder/Noli.jpg" id="2_m707h"]
+[ext_resource type="Texture2D" uid="uid://b7bfjrth1np0y" path="res://Corazon.png" id="2_wr8bn"]
+[ext_resource type="Texture2D" uid="uid://cx2v5ljfogeq8" path="res://Mascara Azul.png" id="3_4jjry"]
 [ext_resource type="Texture2D" uid="uid://h8imy3rjyitq" path="res://Sprites/DOC-20260201-WA0002.png" id="3_igm0i"]
 [ext_resource type="Texture2D" uid="uid://4q4h8oeukijj" path="res://Sprites/DOC-20260201-WA0001.png" id="4_wr8bn"]
-[ext_resource type="Texture2D" uid="uid://bx4dg7ki7od55" path="res://Placeholder/YAAI Noli.png" id="5_wr8bn"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -18,11 +18,11 @@ script = ExtResource("1_m707h")
 [node name="TextureRect" type="TextureRect" parent="."]
 z_index = 1
 layout_mode = 0
-offset_left = 12.0
-offset_top = 642.0
-offset_right = 113.0
-offset_bottom = 706.0
-texture = ExtResource("2_m707h")
+offset_left = -22.0
+offset_top = 610.0
+offset_right = 163.0
+offset_bottom = 766.0
+texture = ExtResource("2_wr8bn")
 expand_mode = 1
 
 [node name="Label" type="RichTextLabel" parent="."]
@@ -36,27 +36,27 @@ text = "Vidas : Vidasjugador.hp"
 [node name="TextureRect2" type="TextureRect" parent="."]
 z_index = 1
 layout_mode = 0
-offset_left = 124.0
-offset_top = 641.0
-offset_right = 225.0
-offset_bottom = 705.0
-texture = ExtResource("2_m707h")
+offset_left = 96.0
+offset_top = 609.0
+offset_right = 272.0
+offset_bottom = 765.0
+texture = ExtResource("2_wr8bn")
 expand_mode = 1
 
 [node name="TextureRect3" type="TextureRect" parent="."]
 z_index = 1
 layout_mode = 0
-offset_left = 235.0
-offset_top = 642.0
-offset_right = 336.0
-offset_bottom = 706.0
-texture = ExtResource("2_m707h")
+offset_left = 198.0
+offset_top = 610.0
+offset_right = 386.0
+offset_bottom = 760.0
+texture = ExtResource("2_wr8bn")
 expand_mode = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1195, 110.99998)
-scale = Vector2(0.19921875, 0.24023438)
-texture = ExtResource("3_igm0i")
+position = Vector2(1194, 127)
+scale = Vector2(0.23863241, 0.26837492)
+texture = ExtResource("3_4jjry")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 position = Vector2(1197, 231.99998)
@@ -78,8 +78,8 @@ vertical_alignment = 1
 
 [node name="Sprite2D3" type="Sprite2D" parent="."]
 position = Vector2(1199.5, 337.5)
-scale = Vector2(0.3119047, 0.27380955)
-texture = ExtResource("5_wr8bn")
+scale = Vector2(0.2363281, 0.24414058)
+texture = ExtResource("3_igm0i")
 
 [node name="Label3" type="Label" parent="."]
 layout_mode = 0

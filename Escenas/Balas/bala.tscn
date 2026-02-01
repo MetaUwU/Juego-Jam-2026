@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://oaf5u6q0ipk6"]
 
 [ext_resource type="Script" uid="uid://c8rk4qatoufir" path="res://Escenas/Balas/bala.gd" id="1_r8vkm"]
-[ext_resource type="Texture2D" uid="uid://cv312666hence" path="res://Sprites/Projectil Rojo.png" id="2_74oj2"]
+[ext_resource type="Texture2D" uid="uid://c6egy7w42k1tn" path="res://Bala azul.png" id="2_74oj2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ag3k0"]
 radius = 30.0
@@ -12,8 +12,8 @@ script = ExtResource("1_r8vkm")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-9.999997, -2.2644415)
-scale = Vector2(0.3515625, 0.3408767)
+position = Vector2(-9, -0.99999905)
+scale = Vector2(0.3828125, 0.37117684)
 texture = ExtResource("2_74oj2")
 
 [node name="Area2D" type="Area2D" parent="."]

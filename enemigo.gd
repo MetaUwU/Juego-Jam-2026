@@ -85,3 +85,7 @@ func _on_shoot_timer_3_timeout() -> void:
 		get_tree().root.add_child(b3)
 		b3.position = l.global_position
 		b3.rotation = l.global_rotation
+
+
+func _on_ganar_timeout() -> void:
+	pass # Replace with function body.
