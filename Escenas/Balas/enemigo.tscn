@@ -34,5 +34,8 @@ shape = SubResource("RectangleShape2D_gu47k")
 
 [node name="shoot_timer2" type="Timer" parent="."]
 
+[node name="shoot_timer3" type="Timer" parent="."]
+
 [connection signal="timeout" from="shoot_timer" to="." method="_on_shoot_timer_timeout"]
 [connection signal="timeout" from="shoot_timer2" to="." method="_on_shoot_timer_2_timeout"]
+[connection signal="timeout" from="shoot_timer3" to="." method="_on_shoot_timer_3_timeout"]
