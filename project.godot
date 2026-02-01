@@ -15,6 +15,10 @@ run/main_scene="uid://buhfjrp6dgu11"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://Sprites/icon.svg"
 
+[autoload]
+
+Vidas_jugador="*res://vidas_jugador.gd"
+
 [display]
 
 window/size/viewport_width=1280

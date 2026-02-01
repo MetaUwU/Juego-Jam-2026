@@ -44,3 +44,6 @@ func Cambiar_Mascara():
 		$Sprite_prota_1.visible = false
 		
 		print("Mascara 31sds")
+
+func daño():
+	print("señal")

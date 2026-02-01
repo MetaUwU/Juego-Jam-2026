@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dcvqguf3ikyxs" path="res://Escenas/Balas/bala_2.tscn" id="3_spkme"]
 [ext_resource type="PackedScene" uid="uid://cyumrq7187rlg" path="res://Escenas/Balas/bala_3.tscn" id="4_n77xa"]
 [ext_resource type="PackedScene" uid="uid://ct6t224x6ues7" path="res://Escenas/fondo.tscn" id="5_aoscc"]
-[ext_resource type="PackedScene" uid="uid://dvmw3xsmecpfo" path="res://Escenas/enemigo.tscn" id="6_74bab"]
+[ext_resource type="PackedScene" uid="uid://u0cxj2a4kk0f" path="res://Escenas/Balas/Interfaz.tscn" id="6_74bab"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_74bab"]
 a = Vector2(-644, 1)
@@ -21,6 +21,7 @@ b = Vector2(0, 344)
 position = Vector2(632, 280)
 
 [node name="Protagonista" parent="." instance=ExtResource("2_spkme")]
+position = Vector2(344, 634)
 
 [node name="Bala_2" parent="." instance=ExtResource("3_spkme")]
 position = Vector2(745, 106)
@@ -29,9 +30,7 @@ position = Vector2(745, 106)
 position = Vector2(484, 122)
 
 [node name="fondo" parent="." instance=ExtResource("5_aoscc")]
-scroll_offset = Vector2(-58, -17)
-
-[node name="Enemigo" parent="." instance=ExtResource("6_74bab")]
+scroll_offset = Vector2(-44, 339)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(638, 361)
@@ -53,3 +52,5 @@ shape = SubResource("SegmentShape2D_i3j75")
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Camera2D/StaticBody2D"]
 position = Vector2(-634, 13)
 shape = SubResource("SegmentShape2D_i3j75")
+
+[node name="Control" parent="." instance=ExtResource("6_74bab")]
