@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gu47k"]
 size = Vector2(56, 52)
 
-[node name="Enemigo" type="StaticBody2D"]
+[node name="Enemigo" type="Node2D"]
 position = Vector2(364, 114)
 script = ExtResource("1_sn5mr")
 
@@ -23,3 +23,9 @@ metadata/_edit_group_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(1, 2)
 shape = SubResource("RectangleShape2D_gu47k")
+
+[node name="Rotater" type="Node2D" parent="."]
+
+[node name="shoot_timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="shoot_timer" to="." method="_on_shoot_timer_timeout"]

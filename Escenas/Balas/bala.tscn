@@ -6,7 +6,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_ag3k0"]
 radius = 30.0
 
-[node name="Bala" type="RigidBody2D"]
+[node name="Bala" type="Node2D"]
 script = ExtResource("1_r8vkm")
 metadata/_edit_group_ = true
 
@@ -19,5 +19,6 @@ texture = ExtResource("2_r8vkm")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_ag3k0")
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[node name="killtimer" type="Timer" parent="."]
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
