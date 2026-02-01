@@ -1,11 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://buhfjrp6dgu11"]
+[gd_scene load_steps=11 format=3 uid="uid://buhfjrp6dgu11"]
 
 [ext_resource type="PackedScene" uid="uid://oaf5u6q0ipk6" path="res://Escenas/Balas/bala.tscn" id="1_d3d2o"]
+[ext_resource type="Script" uid="uid://bkgkjcpo1nk73" path="res://vidas_jugador.gd" id="1_i3j75"]
 [ext_resource type="PackedScene" uid="uid://xfaymgsxccxp" path="res://Escenas/Jugador.tscn" id="2_spkme"]
 [ext_resource type="PackedScene" uid="uid://dcvqguf3ikyxs" path="res://Escenas/Balas/bala_2.tscn" id="3_spkme"]
 [ext_resource type="PackedScene" uid="uid://cyumrq7187rlg" path="res://Escenas/Balas/bala_3.tscn" id="4_n77xa"]
 [ext_resource type="PackedScene" uid="uid://ct6t224x6ues7" path="res://Escenas/fondo.tscn" id="5_aoscc"]
-[ext_resource type="PackedScene" uid="uid://u0cxj2a4kk0f" path="res://Escenas/Balas/Interfaz.tscn" id="6_74bab"]
+[ext_resource type="PackedScene" uid="uid://dvmw3xsmecpfo" path="res://Escenas/enemigo.tscn" id="6_74bab"]
+[ext_resource type="PackedScene" uid="uid://u0cxj2a4kk0f" path="res://Escenas/Balas/Interfaz.tscn" id="7_i3j75"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_74bab"]
 a = Vector2(-644, 1)
@@ -16,6 +18,7 @@ a = Vector2(-3, -379)
 b = Vector2(0, 344)
 
 [node name="Juego" type="Node2D"]
+script = ExtResource("1_i3j75")
 
 [node name="Bala" parent="." instance=ExtResource("1_d3d2o")]
 position = Vector2(632, 280)
@@ -36,6 +39,8 @@ scroll_offset = Vector2(-3, -3)
 position = Vector2(638, 361)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Camera2D"]
+collision_layer = 128
+collision_mask = 0
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Camera2D/StaticBody2D"]
 position = Vector2(8, -359)
@@ -53,4 +58,6 @@ shape = SubResource("SegmentShape2D_i3j75")
 position = Vector2(-634, 13)
 shape = SubResource("SegmentShape2D_i3j75")
 
-[node name="Control" parent="." instance=ExtResource("6_74bab")]
+[node name="Control" parent="." instance=ExtResource("7_i3j75")]
+
+[node name="Enemigo" parent="." instance=ExtResource("6_74bab")]

@@ -10,6 +10,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	Cambiar_Mascara()
 
+		
 #recontra controlar, esta seguro RE mal
 func Cambiar_Mascara():
 	if Input.is_action_just_pressed("Mascara_1"):
@@ -44,6 +45,3 @@ func Cambiar_Mascara():
 		$Sprite_prota_1.visible = false
 		
 		print("Mascara 31sds")
-
-func daño():
-	print("señal")

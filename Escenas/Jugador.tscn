@@ -12,6 +12,8 @@ size = Vector2(40, 42)
 [node name="Protagonista" type="CharacterBody2D"]
 position = Vector2(197, 216)
 disable_mode = 1
+collision_layer = 129
+collision_mask = 129
 script = ExtResource("1_pqx3y")
 metadata/_edit_group_ = true
 

@@ -1,10 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dvmw3xsmecpfo"]
+[gd_scene load_steps=3 format=3 uid="uid://dvmw3xsmecpfo"]
 
 [ext_resource type="Script" uid="uid://ba837o1qawkc6" path="res://enemigo.gd" id="1_sn5mr"]
-[ext_resource type="Texture2D" uid="uid://bu0ybul4bnke8" path="res://Placeholder/Noli.jpg" id="2_u0pjx"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gu47k"]
-size = Vector2(56, 52)
+[ext_resource type="Texture2D" uid="uid://dsk3foj1t1gmd" path="res://chimera.png" id="2_24lda"]
 
 [node name="Enemigo" type="Node2D"]
 position = Vector2(364, 114)
@@ -12,17 +9,8 @@ script = ExtResource("1_sn5mr")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(18.000004, -43)
-scale = Vector2(0.37810946, 0.27888447)
-texture = ExtResource("2_u0pjx")
-metadata/_edit_group_ = true
-
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2(18, -43)
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(1, 2)
-shape = SubResource("RectangleShape2D_gu47k")
+scale = Vector2(0.21484372, 0.17773439)
+texture = ExtResource("2_24lda")
 
 [node name="Rotater" type="Node2D" parent="."]
 

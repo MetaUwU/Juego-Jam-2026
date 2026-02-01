@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="Juego Global Game Jam"
-run/main_scene="uid://buhfjrp6dgu11"
+run/main_scene="uid://bsdth62ym3jxr"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://Sprites/icon.svg"
 
 [autoload]
 
-Vidas_jugador="*res://vidas_jugador.gd"
+VidasJugador="*res://vidas_jugador.gd"
 
 [display]
 
